@@ -27,7 +27,7 @@ export default function Nav() {
         {open ? '✕' : '☰'}
       </button>
 
-      {/* 2. Menú de Navegación */}
+      {/*  Menú de Navegación */}
       <nav 
         aria-label="Menú principal"
         id={menuId}
@@ -57,12 +57,6 @@ export default function Nav() {
           <li>
             <NavLink to="/interpretes" className={activeClass} onClick={() => setOpen(false)}>
               Intérpretes
-            </NavLink>
-          </li>
-          
-          <li>
-            <NavLink to="/login" className={activeClass} onClick={() => setOpen(false)}>
-              Login
             </NavLink>
           </li>
           

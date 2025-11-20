@@ -1,7 +1,6 @@
 // src/components/Interprete.jsx
 import React from 'react';
 
-
 export default function Interprete({ foto, nombre, children }) { 
   return (
     <article

@@ -5,7 +5,6 @@ export default function Footer() {
     <footer 
       role="contentinfo" 
       className="bg-gray-800 text-white text-center p-4 w-full mt-auto"
-       style={{ backgroundColor: '#008080' }}
     >
       <div className="container mx-auto">
         <p>Mis Peliculas. AbdelMoghit Samini</p>

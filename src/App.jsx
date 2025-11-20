@@ -7,7 +7,6 @@ import HomePage from './pages/HomePage';
 import PeliculasPage from './pages/PeliculasPages'; 
 import DetailPage from './pages/DetailPage';
 import ErrorPage from './pages/ErrorPage';
-import Login from './pages/Login';
 import Admin from './pages/Admin';
 import AdminLayout from './pages/AdminLayout';
 
@@ -23,11 +22,9 @@ function App() {
         
         <Route path='/peliculas' element={<PeliculasPage />} />
         
-    
         <Route path='/interpretes' element={<InterpretesPage />} />
         
         <Route path='/pelicula/:id' element={<DetailPage />} />
-        <Route path='/login' element={<Login />} />
       </Route>
 
     
