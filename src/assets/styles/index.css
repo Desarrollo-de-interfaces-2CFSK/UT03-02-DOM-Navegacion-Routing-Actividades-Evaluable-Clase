@@ -1,33 +1,7 @@
 @import "tailwindcss";
 @import "./theme.css";
 
-/** Metodología BEM
- * 
- * Sintaxis:
- * .bloque__elemento--modificador
- *
- * Ejemplo práctico:
- *
- * .newsletter {
- *   text-align: center;
- * }
- *
- * .newsletter__heading {
- *   font-size: 2rem;
- *   margin-bottom: 1rem;
- * }
- *
- * .newsletter__button--action {
- *   background: #74B9FF;
- *   border-color: #74B9FF;
- *   color: white;
- * }
- *
- * Explicación:
- * - "newsletter" es el BLOQUE → el componente principal.
- * - "newsletter__heading" es un ELEMENTO → parte del bloque.
- * - "newsletter__button--action" es un MODIFICADOR → una variación del elemento.
- */
+
 .contenedor__h1{
   /* font-family: var(--heading-h1-font-family); */
   font-size: var(--heading-h1-font-size);

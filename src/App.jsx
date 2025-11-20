@@ -1,3 +1,5 @@
+// src/App.jsx
+
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Contenedor from './components/Contenedor';
 
@@ -9,6 +11,8 @@ import Login from './pages/Login';
 import Admin from './pages/Admin';
 import AdminLayout from './pages/AdminLayout';
 
+import InterpretesPage from './pages/InterpretesPage'; 
+
 function App() {
   return (
     <Routes>
@@ -18,12 +22,15 @@ function App() {
         <Route path='/inicio' element={<Navigate to='/' />} />
         
         <Route path='/peliculas' element={<PeliculasPage />} />
+        
     
+        <Route path='/interpretes' element={<InterpretesPage />} />
+        
         <Route path='/pelicula/:id' element={<DetailPage />} />
         <Route path='/login' element={<Login />} />
       </Route>
 
-   
+    
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<Admin />} />
       </Route>

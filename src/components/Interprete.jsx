@@ -1,16 +1,35 @@
+// src/components/Interprete.jsx
+import React from 'react';
 
 
-function Interprete({ foto, nombre, children, esNota10 }) {
-return (
-<article tabIndex={0} aria-label={`Intérprete ${nombre}${esNota10 ? ', destacado' : ''}`} className="bg-white rounded p-3 shadow">
-<figure className="aspect-square w-full overflow-hidden rounded">
-<img src={foto} alt={`Foto de ${nombre}`} className="w-full h-56 object-cover" loading="lazy" />
-</figure>
-<h4 className={`mt-2 ${esNota10 ? 'text-red-600' : 'text-gray-900'}`}><strong>{nombre}</strong></h4>
-<p className="text-sm text-gray-700">{children}</p>
-</article>
-);
+export default function Interprete({ foto, nombre, children }) { 
+  return (
+    <article
+      tabIndex={0}
+     
+      className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-4"
+      aria-label={`Intérprete ${nombre}`} 
+    >
+   
+      <figure className="w-full aspect-square rounded-lg bg-gray-100 overflow-hidden">
+        
+        <img
+          src={foto}
+          alt={`Foto de ${nombre}`}
+          loading="lazy"
+          className="w-full h-full object-cover" 
+        />
+      </figure>
+
+   
+      <h3 className="mt-3 text-xl font-bold text-gray-900">
+        {nombre}
+      </h3>
+      
+    
+      <p className="text-sm text-gray-700 mt-1 line-clamp-3">
+        {children}
+      </p>
+    </article>
+  );
 }
-
-
-export default Interprete;
