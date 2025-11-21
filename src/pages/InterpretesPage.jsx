@@ -3,29 +3,24 @@ import peliculas from '../data/peliculas';
 import List from '../components/List';
 import Interprete from '../components/Interprete'; 
 
-const getAllInterpretes = (movies) => {
-  //  Uun array vacío donde iremos guardando los actores únicos
-  const listaActores = [];
+const getAllInterpretes = (peliculas) => {
+  const mapa = new Map();
 
-  movies.forEach(pelicula => {
+  peliculas.forEach(pelicula => {
     pelicula.actores.forEach(actor => {
-      
-      // Antes de guardar, buscamos en nuestra lista si ya existe alguien con ese nombre
-      // .find() devuelve el elemento si lo encuentra.
-      const yaExiste = listaActores.find(item => item.nombre === actor.nombre);
-
-      //  Si NO existe, lo añadimos al array
-      if (!yaExiste) {
-        listaActores.push({
-          ...actor, //  Esto para copiar todo el objeto actor  
-          id: actor.nombre   // añade el nombre como id
-        });
-      }
+      // Map para evitar duplicado
+      mapa.set(actor.nombre, {
+        nombre: actor.nombre,
+        imagen: actor.imagen,
+        biografia: actor.biografia,
+        id: actor.nombre  
+      });
     });
   });
 
-  return listaActores;
+  return Array.from(mapa.values());
 };
+
 
 
 export default function InterpretesPage() {
