@@ -30,7 +30,7 @@ export default function InterpretesPage() {
     <section>
       <h2 className="text-2xl font-semibold mb-4 text-center">Listado de Intérpretes</h2>
       
-      {/* Usamos una prop simple en vez de una función */}
+      {/* */}
       <List items={interpretes} esInterprete={true} />
       
     </section>
