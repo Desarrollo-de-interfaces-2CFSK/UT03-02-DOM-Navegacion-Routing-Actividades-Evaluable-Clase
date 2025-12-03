@@ -1,0 +1,42 @@
+import { Meta, Primary, Controls, Story, Description } from '@storybook/addon-docs/blocks';
+ 
+import * as ListStories from './List.stories';
+ 
+<Meta of={ListStories} />
+ 
+# Componente List (`<List />`)
+ 
+## Descripción General
+<Description />
+ 
+<Primary />
+ 
+## Propiedades (Props)
+ 
+<Controls />
+ 
+## Historias
+ 
+###  Películas (Comportamiento por Defecto)
+ 
+Este es el modo predeterminado (`esInterprete={false}`). Renderiza tarjetas de película con enlaces de navegación.
+ 
+<Story of={ListStories.Movies} />
+ 
+###  Intérpretes
+ 
+Cuando se establece `esInterprete={true}`, el componente muestra tarjetas de intérpretes con foto y biografía.
+ 
+<Story of={ListStories.Interpreters} />
+ 
+###  Estado Vacío
+ 
+Ejemplo de la lista sin elementos.
+ 
+<Story of={ListStories.Empty} />
+ 
+###  Responsividad (Muchos Elementos)
+ 
+Una demostración de cómo se comporta la lista con un número grande de elementos para probar la cuadrícula.
+ 
+<Story of={ListStories.Many} />
